@@ -55,4 +55,4 @@ class ContactController extends Controller
         return $response;
     }
 }
-}
+
