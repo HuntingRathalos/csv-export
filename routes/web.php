@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/' , 'ContactController@index')->name('index');
+Route::post('csv/export', 'ContactController@csvExport')->name('contact.csv.export');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
